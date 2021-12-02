@@ -1,0 +1,49 @@
+#titulo {
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: column; 
+}
+
+#login {
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+}
+
+.camposLogin {
+    width: 20%;
+    margin-top: 8px;
+    margin-bottom:  8px;
+    padding: 5px;
+    border-radius: 8px;
+    border-color: lightgray;
+}
+
+#superIntento {
+    align-items: center;
+    justify-content: left;
+    display:flex;
+    flex-direction: column;
+}
+.intento{
+    width: 50%;
+    margin-top: 8px;
+    margin-bottom:  8px;
+    padding: 5px;
+    border-radius: 8px;
+    border-color: lightgray;
+
+}
+
+#botonContinuar {
+    width: 10%;   
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: rgb(229,143,247);
+    color: white;
+    cursor: pointer; 
+}
