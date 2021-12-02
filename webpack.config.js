@@ -4,10 +4,10 @@ module.exports =
 {
     mode: "development",
     devtool: "eval-source-map",
-    entry : "./src/index.js",
+    entry : { index: "./src/index.js", patallaVotacione: "./src/patallaVotacione.js" }, 
     output: 
     {
-        path: path.resolve(__dirname, "public"),
-        filename: "index.js"
+        path: path.resolve(__dirname, "./public"),
+      
     }
-}
+};
