@@ -51,7 +51,7 @@ export class tarjetaLibro {
         tarjeta.appendChild(boton5);
 
         
-        //let puntajito=0;
+        let puntajito=0;
         boton1.addEventListener( "click",(e, eve)=>{
             //puntajito+=1;
             const db=getDatabase();
@@ -59,55 +59,108 @@ export class tarjetaLibro {
 
             const puntajito = ref(db, "libro/" + this.libros.id + "/" + "puntuacion");
             const valorVoto = ref (db, "libro/" + this.libros.id + "/" + "valorVoto" );
+            const vecesVotadas = ref (db, "libro/" + this.libros.id + "/" + "vecesVotadas");
 
-            update(refref,{"puntuacion": puntajito});
+            this.libros.vecesVotadas+=1;
+            this.libros.valorVoto +=1;
 
-           
-            
-       
+            this.libros.puntuacion = (this.libros.valorVoto/this.libros.vecesVotadas).toFixed(1) ;
+
+            set (puntajito, this.libros.puntuacion);
+            set (valorVoto, this.libros.valorVoto);
+            set (vecesVotadas, this.libros.vecesVotadas);
+
+
 
         });
 
         
         boton2.addEventListener( "click",(e, eve)=>{
             
-            puntajito+=2;
+            //puntajito+=2;
             const db=getDatabase();
             const refref= ref(db,"libro/" + this.libros.id);
-            update(refref,{"puntuacion": puntajito});
+
+            const puntajito = ref(db, "libro/" + this.libros.id + "/" + "puntuacion");
+            const valorVoto = ref (db, "libro/" + this.libros.id + "/" + "valorVoto" );
+            const vecesVotadas = ref (db, "libro/" + this.libros.id + "/" + "vecesVotadas");
+
+            this.libros.vecesVotadas+=1;
+            this.libros.valorVoto +=2;
+
+            this.libros.puntuacion= (this.libros.valorVoto/this.libros.vecesVotadas).toFixed(1);
+            set (puntajito, this.libros.puntuacion);
+
             
+            set (valorVoto, this.libros.valorVoto);
+            set (vecesVotadas, this.libros.vecesVotadas);
             
             
         });
 
         
         boton3.addEventListener( "click",(e, eve)=>{
-            puntajito+=3;
+            //puntajito+=3;
             const db=getDatabase();
             const refref= ref(db,"libro/" + this.libros.id);
-            update(refref,{"puntuacion": puntajito});
-            //let puntajito=0;
+
+            const puntajito = ref(db, "libro/" + this.libros.id + "/" + "puntuacion");
+            const valorVoto = ref (db, "libro/" + this.libros.id + "/" + "valorVoto" );
+            const vecesVotadas = ref (db, "libro/" + this.libros.id + "/" + "vecesVotadas");
+
+            this.libros.vecesVotadas+=1;
+            this.libros.valorVoto +=3;
+
+            this.libros.puntuacion = (this.libros.valorVoto/this.libros.vecesVotadas).toFixed(1) ;
+            set (puntajito, this.libros.puntuacion);
+
+            
+            set (valorVoto, this.libros.valorVoto);
+            set (vecesVotadas, this.libros.vecesVotadas);
           
             
         });
 
         boton4.addEventListener( "click",(e, eve)=>{
-            puntajito+=4;
+            //puntajito+=4;
             const db=getDatabase();
             const refref= ref(db,"libro/" + this.libros.id);
-            update(refref,{"puntuacion": puntajito});
 
-           // let puntajito=0;
+            const puntajito = ref(db, "libro/" + this.libros.id + "/" + "puntuacion");
+            const valorVoto = ref (db, "libro/" + this.libros.id + "/" + "valorVoto" );
+            const vecesVotadas = ref (db, "libro/" + this.libros.id + "/" + "vecesVotadas");
+
+            this.libros.vecesVotadas+=1;
+            this.libros.valorVoto +=4;
+
+            this.libros.puntuacion = (this.libros.valorVoto/this.libros.vecesVotadas).toFixed(1) ;
+            set (puntajito, this.libros.puntuacion);
+
+            set (valorVoto, this.libros.valorVoto);
+            set (vecesVotadas, this.libros.vecesVotadas);
+
+            
             
             
         });
 
         boton5.addEventListener( "click",(e, eve)=>{
-            puntajito+=5;
+            //puntajito+=5;
             const db=getDatabase();
             const refref= ref(db,"libro/" + this.libros.id);
-            update(refref,{"puntuacion": puntajito});
-            
+
+            const puntajito = ref(db, "libro/" + this.libros.id + "/" + "puntuacion");
+            const valorVoto = ref (db, "libro/" + this.libros.id + "/" + "valorVoto" );
+            const vecesVotadas = ref (db, "libro/" + this.libros.id + "/" + "vecesVotadas");
+
+            this.libros.vecesVotadas+=1;
+            this.libros.valorVoto +=5;
+
+            this.libros.puntuacion = (this.libros.valorVoto/this.libros.vecesVotadas).toFixed(1) ;
+            set (puntajito, this.libros.puntuacion);
+
+            set (valorVoto, this.libros.valorVoto);
+            set (vecesVotadas, this.libros.vecesVotadas);
         });
         
         
