@@ -25,7 +25,7 @@ const contraseña = document.getElementById("contraseña");
 const botonLogin = document.getElementById("botonContinuar");
 
 const loginUsuario = (e, event) => {
-    signInWithEmailAndPassword(auth, email.value, password.value)
+    signInWithEmailAndPassword(auth, correo.value, contraseña.value)
     .then((credencialUsario) => {
         console.log(credencialUsario);
         window.location.href = "patallaVotacione.html";
@@ -47,7 +47,7 @@ const loginUsuario = (e, event) => {
     });
 }
 
-login(user);
+//login(user);
 botonLogin.addEventListener("click", login);
 
 onAuthStateChanged(auth, (user_account)=>{

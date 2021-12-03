@@ -162,9 +162,7 @@ export class tarjetaLibro {
             set (valorVoto, this.libros.valorVoto);
             set (vecesVotadas, this.libros.vecesVotadas);
         });
-        
-        
-        return tarjeta;
+         return tarjeta;
 
     }
 }
